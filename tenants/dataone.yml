@@ -1,0 +1,59 @@
+# Logos for a tenant are kept at app/assets/images/tenants and may be a svg, png or jpg file
+# with the name logo_<tenant_id>.<ext> .
+
+# Similarly, the about and help pages may be customized by adding files to app/views/tenants/<tenant_id>/ .
+# The files are in Markdown format and named such as _about.html.md and _help.html.md
+
+default: &default
+  enabled: true # if this is set to false then this tenant isn't shown in the UI
+  repository: # change me: you'll probably have to change all the following indented values and only if using Merritt repo
+    type: merritt
+    domain: merritt-repo-dev-example.cdlib.org
+    endpoint: "http://uc3-mrtsword-dev.cdlib.org:39001/mrtsword/collection/my_collection_id"
+    username: "submitter_username"
+    password: "submitter_password"
+  contact_email: ["contact1@example.edu", "contact2@example.edu"]
+  abbreviation: "DataONE"
+  short_name: "DataONE"
+  long_name: "DataONE"
+  full_domain: "oneshare2-dev.cdlib.org" # uses this domain name to create links in cases when we need more than a path
+  domain_regex: "oneshare2-dev.cdlib.org$" # uses this regex to match against the domain name to know which tenant is in use
+  tenant_id: dataone
+  identifier_service: # change me: the identifier service is EZID here, may need to change this
+    shoulder: "doi:10.5072/FK2"
+    account: my_account_name
+    password: my_account_password
+    id_scheme: doi
+    owner: null
+  authentication: # change me: which authentication
+    strategy: google
+  default_license: cc0
+  dash_logo_after_tenant: false # moves the dash logo after the tenant logo if this is true
+  max_file_size: 2000000000 # 2 GB -- limit for an individual file
+  max_submission_size: 2000000000 # 2 GB -- of new files to be submitted at once in a version
+  max_total_version_size: 10000000000 # 10 GB -- all previously kept (unmodified) and newly submitted files may not be larger than this per version
+
+development:
+  <<: *default
+  #Add any items that need to override the defaults here
+
+stage:
+  <<: *default
+  #Add any items that need to override the defaults here, these values would need to be modified
+  repository:
+    type: merritt
+    domain: merritt-stage.cdlib.org
+    endpoint: "http://uc3-mrtsword-stg.cdlib.org:39001/mrtsword/collection/my_collection_id"
+    username: "my_account_name"
+    password: "my_account_password"
+  full_domain: "oneshare-stg.cdlib.org"
+  domain_regex: "oneshare-stg.cdlib.org$"
+
+production:
+  <<: *default
+  #Add any items that need to override the defaults here, probably needs some modification
+
+test:
+  <<: *default
+  #Add any items that need to override the defaults here, probably needs some modification
+

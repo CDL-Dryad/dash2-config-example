@@ -1,0 +1,23 @@
+/log/*
+/tmp
+
+# Ignore IntelliJ IDE project configuration.
+*.iml
+*.ipr
+*.iws
+.rakeTasks
+.idea
+
+# Ignore Emacs backups.
+*~
+
+# Ignore MacOS generated files
+.DS_Store
+
+# Ignore directories used on servers for non-config items
+/bundle
+/log
+/public
+/tmp
+/vendor
+/uploads
