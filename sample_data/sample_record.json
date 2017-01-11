@@ -1,0 +1,23 @@
+{
+  "uuid": "doi:10.5072/FK2SF2SH9B",
+  "dc_identifier_s": "doi:10.5072/FK2SF2SH9B",
+  "dc_title_s": "A Case for Reinforcement Learning",
+  "dc_creator_sm": [
+    "Fisher, Scott"
+  ],
+  "dc_type_s": "Dataset",
+  "dc_description_s": "Cryptographers agree that Bayesian epistemologies are an interesting\n          new topic in the field of operating systems, and cyberneticists\n          concur. After years of important research into write-back caches, we\n          confirm the investigation of systems that would make improving DNS a\n          real possibility. We introduce a novel heuristic for the emulation of\n          Boolean logic, which we call Refer.",
+  "dc_subject_sm": [
+    "snow depth"
+  ],
+  "dct_spatial_sm": [
+    "Oakland, CA, USA"
+  ],
+  "georss_box_s": "37.482487 -122.355881 37.885255 -122.032013",
+  "solr_geom": "ENVELOPE(-122.355881, -122.032013, 37.885255, 37.482487)",
+  "solr_year_i": 2016,
+  "dct_issued_dt": "2016-11-28T00:00:00Z",
+  "dc_rights_s": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "dc_publisher_s": "UC Berkeley",
+  "timestamp": "2016-11-29T20:00:02.813Z"
+}
