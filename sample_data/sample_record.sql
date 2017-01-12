@@ -19,6 +19,10 @@ INSERT INTO `stash_engine_users` (`id`, `first_name`, `last_name`, `email`, `uid
 VALUES
   (94, 'Scott', 'Fisher', 'scott.fisher@ucop.edu', 'scott.fisher-ucb@ucop.edu', 'developer', NULL, '2016-10-06 20:37:29', '2016-10-06 20:37:29', 'ucb', 0);
 
+INSERT INTO `stash_engine_resource_states` (`id`, `user_id`, `resource_state`, `created_at`, `updated_at`, `resource_id`)
+VALUES
+  (1050, 94, 'published', '2016-11-29 00:47:35', '2016-11-29 00:47:35', 525);
+
 INSERT INTO `stash_engine_submission_logs` (`id`, `resource_id`, `archive_response`, `created_at`, `updated_at`, `archive_submission_request`)
 VALUES
   (10, 525, 'Success', '2016-11-29 00:47:35', '2016-11-29 00:47:35', 'Submitting /Users/scottfisher/workspace/dashv2/uploads/525_archive.zip for \'A Case for Reinforcement Learning\' (doi:10.5072/FK2SF2SH9B) at 2016-11-28 16:47:00 -0800: collection_uri: http://uc3-mrtsword-dev.cdlib.org:39001/mrtsword/collection/dash_ucb,');
