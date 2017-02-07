@@ -1,5 +1,6 @@
 defaults: &DEFAULTS
   metadata_engine: StashDatacite # this is the engine to use for metadata entry for this application
+  repository: Stash::Merritt::Repository # this is the repository module for this application
   shared_resource_model: StashEngine::Resource # TODO: we can probably remove this and make it default
   stash_mount: /stash # TODO: Do we really want to allow changing the path where StashEngine is mounted?
   # --- sandbox orcid credentials begin ---
