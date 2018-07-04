@@ -1,0 +1,37 @@
+defaults: &DEFAULTS
+  metadata_engine: StashDatacite # this is the engine to use for metadata entry for this application
+  shared_resource_model: StashEngine::Resource # TODO: we can probably remove this and make it default
+  stash_mount: /stash # TODO: Do we really want to allow changing the path where StashEngine is mounted?
+  # --- sandbox orcid credentials begin ---
+  site: https://sandbox.orcid.org/
+  authorize_url: https://sandbox.orcid.org/oauth/authorize
+  token_url: https://api.sandbox.orcid.org/oauth/token
+  orcid_key:  my.orcid.key # change me: get key from orcid and replace here
+  orcid_secret: my.orcid.secret # change me: get secret from orcid and replace here
+  member: true # change me: set to true or false
+  sandbox: true # change me: set to true or false
+  # -- sandbox orcide credentials end ---
+  feedback_email_to: [email1@example.com, email2@example.com, email3@example.com] # change me
+  feedback_email_from: no-reply@example.com # change me
+  contact_us_uri: http://my.institutions.page.for.contact.us/page # change URL
+
+development: &DEVELOPMENT
+  <<: *DEFAULTS
+  shib_sp_host: my.shib.service.provider.domain.edu # change me
+  google_client_id: random-digits.apps.googleusercontent.com # change me: get client ID from Google API Console if you need google login
+  google_client_secret: blah # change me: get client secret from Google API console and replace
+  collection_uri: http://sample.merritt.url:39001/mrtsword/ # TODO: should this be elsewhere or named differently since it only applies to merritt-sword?
+  google_analytics_id: UA-my-id # change me
+
+# For other environments (stage, production, test) besides development, follow the example for development.
+# You can copy & paste development, but change the heading at the start and then modify values.
+# The start would look like this for stage, for example:
+#
+# stage: &STAGE
+# <<: *DEFAULTS
+#
+# Those inital lines will set the environment so it has an alias and the "<<: *DEFAULTS"
+# inserts those default lines (from the DEFAULTS aliased secton) at that spot.  This has the effect
+# of inheriting those values from the DEFAULTS section.  If you would like to override
+# values from the DEFAULTS, you can simply repeat the item you want to override and give
+# it a new value for that environment.
