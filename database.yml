@@ -14,20 +14,5 @@ development:
 
 test:
   <<: *default
-  host: 127.0.0.1 # change these lines or override lines from default if they are not right
+  database: dashv2_test
   username: travis
-  password: ""
-
-stage:
-  <<: *default
-  host: my.stage.db.server # change these lines or override lines from default if they are not right
-  username: my_stage_username
-  password: "my_stage_password"
-
-production:
-  <<: *default
-  host: my.production.db.server # change these lines or override lines from default if they are not right
-  username: my_production_username
-  password: "my_production_password"
-
-# for a short explanation of default and inheritance, see the app_config.yml file
