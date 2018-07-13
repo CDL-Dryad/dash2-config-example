@@ -11,7 +11,6 @@ default: &default
     endpoint: "http://merritt.repository.domain.here/mrtsword/collection/demo_open_context"
     username: "submitter.username"
     password: "submitter.password"
-  manager_email: [""]
   abbreviation: "DataONE"
   short_name: "DataONE"
   long_name: "DataONE"
@@ -28,16 +27,12 @@ default: &default
   authentication:
     strategy: google
   default_license: cc0
-  dash_logo_after_tenant: false
   ## maximum total size (default 100 GB for now)
   max_submission_size: 100000000000
   max_total_version_size: 10000000000
   max_files: 1000
-  contact_email: ["uc3@ucop.edu"]
-  usage_disclaimer: ""
-  campus_contacts: [""]
+  campus_contacts: ["norah.sliger@example.org"]
   data_deposit_agreement: false
-  intrusive_data_deposit_agreement: false
 
 development:
   <<: *default

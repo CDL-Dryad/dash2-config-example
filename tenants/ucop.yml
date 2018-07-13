@@ -11,7 +11,6 @@ default: &default
     endpoint: "http://merritt.repository.domain.here/mrtsword/collection/dash_cdl"
     username: "submitter.username"
     password: "submitter.password"
-  manager_email: [""]
   abbreviation: "UC"
   short_name: "UC Office of the President"
   long_name: "University of California, Office of the President"
@@ -31,16 +30,12 @@ default: &default
     entity_id: urn:mace:incommon:ucop.edu
     entity_domain: .ucop.edu
   default_license: cc_by
-  dash_logo_after_tenant: true
   ## maximum total size (default 100 GB for now)
   max_submission_size: 100000000000
   max_total_version_size: 10000000000
   max_files: 1000
-  contact_email: ["uc3@ucop.edu"]
-  usage_disclaimer: ""
-  campus_contacts: ["my_campus_contact@example.org"] # for testing
+  campus_contacts: ["quaren@example.org"] # for testing
   data_deposit_agreement: false
-  intrusive_data_deposit_agreement: false
 
 development:
   <<: *default

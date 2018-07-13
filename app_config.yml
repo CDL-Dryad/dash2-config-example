@@ -8,27 +8,28 @@ defaults: &DEFAULTS
     host: ezid.cdlib.org
     port: 443
   google_maps_api_key: <add_key_here>
+  contact_us_uri: http://www.cdlib.org/services/uc3/contact.html
+  orcid:
+    site: https://sandbox.orcid.org/
+    authorize_url: https://sandbox.orcid.org/oauth/authorize
+    token_url: https://api.sandbox.orcid.org/oauth/token
+    key:  <fill-me-in>
+    secret: <fill-me-in>
+    member: true
+    sandbox: true
+    api: https://api.sandbox.orcid.org
+  submission_bc_emails: [""]
+  contact_email: ["changeme@example.org"]
 
 
 development: &DEVELOPMENT
   <<: *DEFAULTS
-  shib_sp_host: <where-to-find-shibboleth-service-provider>
-  google_client_id: <google-client-id>
-  google_client_secret: <google-client-secret>
-  # sandbox orcid credentials
-  site: https://sandbox.orcid.org/
-  authorize_url: https://sandbox.orcid.org/oauth/authorize
-  token_url: https://api.sandbox.orcid.org/oauth/token
-  orcid_key:  <orcid-key>
-  orcid_secret: <orcid-secret>
-  member: true
-  sandbox: true
-  page_error_email: [someemail@example.org, someotheremail@example.org]
-  submission_error_email: [someemail@example.org]
-  feedback_email_from: no-reply-dryad-dev@datadryad.org
-  collection_uri: http://someserver.example.org:39001/mrtsword/
-  contact_us_uri: http://some.example.org/services/uc3/contact.html
-  google_analytics_id: <some-google-analytics-id>
+  shib_sp_host: <fill-me-in>
+  page_error_email: ~
+  submission_error_email: [emailme@example.org]
+  feedback_email_from: no-reply@example.org
+  collection_uri: http://uc3-mrtsword-dev.cdlib.org:39001/mrtsword/
+  google_analytics_id: <fill-me-in>
 
 test:
   <<: *DEFAULTS
