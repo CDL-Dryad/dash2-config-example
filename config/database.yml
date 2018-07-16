@@ -1,6 +1,6 @@
 default: &default
   adapter: mysql2
-  database: dash
+  database: dryad
   password: blank
   port: 3306
   encoding: utf8mb4
