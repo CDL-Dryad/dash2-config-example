@@ -46,6 +46,10 @@ development:
   <<: *default
   #Add any items that need to override the defaults here
 
+local:
+  <<: *default
+  #Add any items that need to override the defaults here
+
 test:
   <<: *default
   #Add any items that need to override the defaults here

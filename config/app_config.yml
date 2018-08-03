@@ -30,5 +30,8 @@ development: &DEVELOPMENT
   contact_us_uri: http://some.example.org/services/uc3/contact.html
   google_analytics_id: <some-google-analytics-id>
 
+local:
+  <<: *DEVELOPMENT
+
 test:
   <<: *DEFAULTS
