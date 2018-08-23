@@ -31,5 +31,8 @@ development: &DEVELOPMENT
   collection_uri: http://uc3-mrtsword-dev.cdlib.org:39001/mrtsword/
   google_analytics_id: <fill-me-in>
 
+local:
+  <<: *DEVELOPMENT
+
 test:
   <<: *DEFAULTS
