@@ -13,7 +13,10 @@ development: &DEVELOPMENT
   password: ""
 
 local:
-  <<: *DEVELOPMENT
+  <<: *default
+  host: 127.0.0.1
+  username: travis
+  password: ""
 
 test:
   <<: *default
